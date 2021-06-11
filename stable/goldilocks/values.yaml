@@ -33,6 +33,7 @@ controller:
     create: true
     # controller.serviceAccount.name -- The name of an existing service account to use for the controller. Combined with `controller.serviceAccount.create`
     name:
+    imagePullSecrets: []
 
   # controller.flags -- A map of additional flags to pass to the controller
   flags: {}
@@ -88,6 +89,7 @@ dashboard:
     create: true
     # dashboard.serviceAccount.name -- The name of an existing service account to use for the controller. Combined with `dashboard.serviceAccount.create`
     name:
+    imagePullSecrets: []
 
   ingress:
     # dashboard.ingress.enabled -- Enables an ingress object for the dashboard.
