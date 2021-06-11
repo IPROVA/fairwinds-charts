@@ -22,6 +22,10 @@ spec:
         app.kubernetes.io/name: {{ include "goldilocks.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
         app.kubernetes.io/component: dashboard
+      {{- if .Values.dashboard.podAnnotations }}
+      annotations:
+{{ toYaml .Values.dashboard.podAnnotations | indent 8 }}
+      {{- end }}
     spec:
       {{- if .Values.dashboard.serviceAccount.create }}
       serviceAccountName: {{ include "goldilocks.fullname" . }}-dashboard

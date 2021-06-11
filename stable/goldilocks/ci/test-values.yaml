@@ -12,3 +12,9 @@ controller:
   flags:
     on-by-default: true
     exclude-namespaces: kube-system
+  podAnnotations:
+    foo: bar
+
+dashboard:
+  podAnnotations:
+    bar: baz

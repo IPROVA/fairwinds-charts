@@ -52,6 +52,8 @@ controller:
     requests:
       cpu: 25m
       memory: 32Mi
+  # controller.podAnnotations -- Defines the metadata.annotations for the controller pod
+  podAnnotations: {}
   # controller.podSecurityContext -- Defines the podSecurityContext for the controller pod
   podSecurityContext: {}
   # controller.securityContext -- The container securityContext for the controller container
@@ -110,6 +112,8 @@ dashboard:
     requests:
       cpu: 25m
       memory: 32Mi
+  # controller.podAnnotations -- Defines the metadata.annotations for the dashboard pod
+  podAnnotations: {}
   # dashboard.podSecurityContext -- Defines the podSecurityContext for the dashboard pod
   podSecurityContext: {}
   # dashboard.securityContext -- The container securityContext for the dashboard container
